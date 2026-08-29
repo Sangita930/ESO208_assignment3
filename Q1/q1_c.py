@@ -1,14 +1,8 @@
 import math
 
-
-# Function f(x)
 def f(x):
     return math.exp((x - 1)**2) - 1
 
-
-# =====================================================
-# Secant Method
-# =====================================================
 
 def secant_method(x_prev, x, tolerance=1e-6, max_iterations=100):
 
@@ -26,10 +20,6 @@ def secant_method(x_prev, x, tolerance=1e-6, max_iterations=100):
 
     return x, max_iterations
 
-
-# =====================================================
-# Modified Secant Method
-# =====================================================
 
 def modified_secant_method(x_prev, x, m=2,
                            tolerance=1e-6,
@@ -50,19 +40,11 @@ def modified_secant_method(x_prev, x, m=2,
     return x, max_iterations
 
 
-# =====================================================
-# Initial guesses
-# =====================================================
-
 x_minus1 = -0.5
 x0 = 0.0
 
 tolerance = 1e-6
 
-
-# =====================================================
-# Standard Secant Method
-# =====================================================
 
 print("======================================")
 print("       STANDARD SECANT METHOD")
@@ -78,10 +60,6 @@ print("\nRoot =", root_secant)
 print("Number of iterations =", iterations_secant)
 
 
-# =====================================================
-# Modified Secant Method
-# =====================================================
-
 print("\n======================================")
 print("       MODIFIED SECANT METHOD")
 print("======================================")
@@ -96,10 +74,6 @@ root_modified, iterations_modified = modified_secant_method(
 print("\nRoot =", root_modified)
 print("Number of iterations =", iterations_modified)
 
-
-# =====================================================
-# Comparison
-# =====================================================
 
 print("\n======================================")
 print("             COMPARISON")
